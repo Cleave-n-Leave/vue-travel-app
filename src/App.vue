@@ -1,12 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> 
-      <router-link to="/about">About</router-link>
-    </div>
+    <TheNavigation />
     <router-view />
   </div>
 </template>
+
+<script>
+import TheNavigation from "@/components/TheNavigation"
+
+export default {
+  components: {
+    TheNavigation
+  }
+}
+</script>
+
 
 <style>
 #app {
@@ -24,9 +32,10 @@
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  padding: 0 10px;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+#nav a.vue-school-active-class {
+  color: red;
 }
 </style>
